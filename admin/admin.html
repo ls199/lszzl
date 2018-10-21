@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登入界面</title>
+    <style type="text/css">
+body{ font-size:12px; font-family:"宋体";}                /*全局控制*/
+body,form,input,p{ padding:0; margin:0; border:0;}       /*重置浏览器的默认样式*/
+form{
+	width:400px;
+	height:200px;
+	padding-top:20px;
+	margin:50px auto;                      /*使表单在浏览器中居中*/
+	background:#f5f8fd;                   /*为表单添加背景颜色*/
+	border-radius:5px;                    /*设置圆角边框*/ 
+	border:1px solid blue;
+} 
+p{
+	margin-top:20px; 
+	text-align:center;
+}
+p span{
+	width:40px;
+	display:inline-block; 
+	text-align:right;
+	}
+p.checkbox{
+    margin-top:10px; 
+	text-align:center;
+    /* padding: 20px 20px 2px 2px; */
+}
+p.button{
+    margin-top:5px; 
+	text-align:center;
+}
+.num,.pass{                                   /*对文本框设置共同的宽、高、边框、内边距*/ 
+	width:152px;                                      
+	height:18px;                                 
+	border:1px solid #38a1bf;
+    padding:2px 20px 2px 2px; 
+}
+.num{                                         /*定义第一个文本框的背景、文本颜色*/
+	 background:url(images/1.jpg) no-repeat 5px center #FFF;
+	 color:#999;
+}
+.pass{                                        /*定义第二个文本框的背景*/                                                    
+	 background:url(images/2.jpg) no-repeat 5px center #FFF;
+}
+.btn01,.btn02{
+	width:60px; 
+	height:25px; 
+	border-radius:3px;                        /*设置圆角边框*/ 
+	border:1px solid #6b5d50; 
+	margin-left:30px;
+}
+.btn01{ background:#3bb7ea;}                  /*设置第一个按钮的背景色*/   
+.btn02{ background:#3bb7ea;}                  /*设置第二个按钮的背景色*/
+    </style>
+</head>
+<body>
+    <form action="#" method="post">	
+    <p>
+        <span>账号：</span>
+        <input type="text" name="username" value="admin" class="num" pattern="^[a-zA-Z][a-zA-Z0-9_]{4,15}$" />
+    </p>
+    <p>
+        <span>密码：</span>
+        <input type="password" name="pwd" class="pass" pattern="^[a-zA-Z]\w{5,17}$"/>
+        
+    </p>
+    <p class="checkbox">
+        <input type="checkbox" />自动登入
+        <input type="checkbox" />记住密码
+        <a>找回密码</a>
+    </p>
+    <p class="button">
+           
+        <input type="button" class="btn01" value="登录"/>
+        <input type="button" class="btn02" value="注册"/>
+   </p>
+</form>
+</body>
+</html>
