@@ -11,6 +11,9 @@ guessField.focus();//使得猜数文本区获得焦点
 
 function checkGuess(){
 // document.write('我是结论');
+var userGuess=new Number(guessField.value);
+console.log(typeof userGuess);
+console.log(userGuess);
 guesses.innerHTML += guessField.value+' ';
 guesses.style.backfroundColor="red";
 }
