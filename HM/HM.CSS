@@ -1,0 +1,120 @@
+*,::before,::after{
+    /* 选择所有的标签 */
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: aqua;
+    /* 设计所有的都是以边框开始计算宽度百分比 */
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    font-size: 14px;
+    font-family: "Microsoft YaHei",sans-serif;
+    color: antiquewhite;
+}
+a{
+    color: aqua;
+    text-decoration: none;
+
+}
+a:hover{
+    text-decoration: none;
+}
+.hm_header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 40px;
+    width: 100%;
+    z-index: 1000;
+    background: #333;
+}
+.hm_header_box{
+    width: 100%;
+    max-width: 640px;
+    min-width: 300px;
+    margin: 0 auto;
+    /* 设置透明度 */
+    background: rgba(201, 21, 35, 0);
+    height: 40px;
+  position: relative;
+}
+/* .hm_header_box> */
+.icon_logo{
+    width: 60px;
+    height: 36px;
+    position: absolute ;
+    background-position: 0 -103px;
+    top:4px;
+    left: 10px;
+    /* background:url(images/logo.png) 0 0 no-repeat; */
+}
+.icon_logo img{
+    width: 100%;
+    height: 100%;
+}
+.login{
+    width: 50px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: blue;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 15px;
+}
+.hm_header_box form{
+    width: 100%;
+    padding-left: 75px;
+    padding-right: 50px;
+    height: 40px;
+    position: relative;
+}
+.hm_header_box form input{
+    width: 100%;
+    height: 30px;
+    border-radius: 15px;
+    margin-top: 5px;
+    padding-left: 30px;
+}
+.icon_search{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    background-position: -60px -109px;
+    top:10px;
+    left: 85px;
+}
+/* 3. */
+.hm_nav{
+    width: 100%;
+    background: #fff;
+    /* border-bottom: 1px solid #e0e0e0; */
+}
+.hm_nav ul{
+    width: 100%;
+    padding: 10px 0;
+}
+.hm_nav ul li{
+    width:25%;
+    float: left;
+    list-style:none
+  
+}
+.hm_nav ul li a{
+    display: block;
+}
+.hm_nav ul li a img{
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+}
+.hm_nav ul li a p{
+    text-align:center;
+    color: #666;
+    font-size: 12px;
+    padding: 6px 0;
+
+}
