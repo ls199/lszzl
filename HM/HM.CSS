@@ -18,7 +18,8 @@ a{
 
 }
 a:hover{
-    text-decoration: none;
+    /* text-decoration: none; */
+    color: blue;
 }
 .hm_header{
     position: fixed;
@@ -58,7 +59,7 @@ a:hover{
     height: 40px;
     line-height: 40px;
     text-align: center;
-    color: blue;
+    /* color: blue; */
     position: absolute;
     right: 0;
     top: 0;
