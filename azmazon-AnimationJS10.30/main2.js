@@ -67,3 +67,6 @@ console.log(imagesDIV);
 imagesDIV.addEventListener('mouseover', stopChange);
 imagesDIV.addEventListener('mouseout', startChange);
 
+// sliderDiv.addEventListener('mouseover', stopChange);
+// sliderDiv.addEventListener('mouseover', function () {    window.clearInterval(timer);  });
+sliderDiv.addEventListener('mouseover', ()=>{clearInterval(timer);});
