@@ -1,0 +1,496 @@
+*,
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    /* 清除移动端默认的点击高度效果 */
+    -webkit-tap-highlight-color: transparent;
+    /* 设置所有的都是以边框开始计算宽度百分比 */
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #333333;
+
+    position: fixed;
+
+
+
+    margin: 0 auto;
+    position: relative;
+    max-width: 640px;
+    min-width: 300px;
+}
+a{
+    /* color: #333; */
+    text-decoration: none;
+}
+a:hover{
+    /* text-decoration: none; */
+    color: blue;
+}
+img
+{
+    transition: opacity 1s linear;
+    opacity: 1;
+    width:  100%;
+    /* height: 40px;     */
+    margin: 0 auto;
+}
+ul,ol{
+    list-style: none;
+}
+input{
+    border: none;
+    outline: none;
+    /* 清除移动端默认的表单样式 */
+    -webkit-appearance: none;
+}
+/* 通用*/
+.f_left
+{
+    float: left;
+}
+.f_right
+{
+    float: left;
+}
+.clearfix::before,.clearfix::after
+{
+    content: "";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+[class^="icon_"]
+{
+    /* background: url(tp/10.png)no-repeat; */
+   
+     background-size: 200px 200px;  
+}
+.m_110
+{
+    margin-left: 10px;
+}
+.m_r10
+{
+    margin-right: 10px;
+}
+.m_b10
+{
+    margin-bottom: 10px;
+}
+.m_t10
+{
+    margin-top: 10px;
+}
+/* 定义顶部通栏 */
+.hm_topBar
+{
+    width: 100%;
+    height: 45px;
+    background: url(icon_4n9m4as08ok/09.png)repeat-x;
+    background-size: 1px 1px;
+    border-bottom: 1px solid #ccc;
+    position: absolute;
+}
+.hn_topBar>[class^="icon_"]
+{
+    position: absolute;
+    top: 0;
+    height: 44px;
+    width: 40px;
+    padding:12px 10px;
+    background-clip: content-box;
+    background-origin: content-box; 
+}
+.hm_topBar>.icon_back
+{
+    left: 0;
+    background-position: -60px 0;
+}
+.hm_topBar>form
+{
+    width: 100%;
+    height: 44px;
+    padding: 0 40px;
+}
+.hm_topBar>form>input
+{
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    height: 30px;
+    margin-top: 7px;
+}
+.hm_topBar>h3{
+    text-align: center;
+    line-height: 44px;
+    font-weight: normal;
+}
+/* 头部搜索 */
+.hm_header
+{
+     position: fixed; /*是以窗口最外层容器计算 */
+     left: 0;
+     top: 0;
+     height: 40px;
+     width: 100%;
+     z-index: 1000;
+}
+.hm_header>.hm_header_box
+{
+    width: 100%;
+    max-width: 640px;
+    min-width: 300px;
+    margin: 0 auto;
+    background: #333;
+     background: rgba(201, 20, 35, 0);/*设置透明度 */
+    height: 40px;
+    position: relative;
+}
+.hm_header>.hm_header_box>.icon_logo
+{
+    width: 80px;
+    height: 30px;
+    position: absolute;
+    background-position: 0 -103px;
+    top: 5px;
+    left: -5px;
+}
+.hm_header_box>.icon_logo img{
+    width: 100%;
+    height: 110%;
+}
+.hm_header>.hm_header_box>.login
+{
+    width: 50px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #ffffff;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 15px;
+
+}
+.hm_header>.hm_header_box>.login:hover{
+    color:blue;
+}
+.hm_header>.hm_header_box>form
+{
+width: 100%;
+padding-left: 75px;
+padding-right: 50px;
+height: 40px;
+position: relative;
+}
+.hm_header>.hm_header_box>form>input
+{
+    width: 100%;
+    height: 30px;
+    border-radius: 15px;
+    margin-top: 5px;
+    padding-left: 30px;
+}
+.hm_header>.hm_header_box>form>.icon_search
+{
+    height: 20px;
+    width: 20ox;
+    position: absolute;
+    background-position: -60px -109px;
+    top: 10px;
+    left: 85px;
+}
+/* 轮播图 */
+/* 图片 */
+#images{
+    /* 相对定位 */
+    position: relative;
+}
+#images>a{
+    transition:opacity 1s linear;
+    display: block;
+    /* 绝对定位 */
+    position: absolute;
+    top:0;
+    left: 0;
+}
+/* // */
+.displayImg{
+    /* display: block; */
+    opacity: 1;
+}
+.hiddenImg{
+    /* display: none; */
+    opacity: 0;
+}
+/* 10.30 */
+/* img{
+    transition:opacity 1s linear;
+    opacity: 1;
+} */
+.slider{
+    /* width: 640px;
+    height: 170px; */
+    width: 100%;
+    height: 200PX;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.btn{
+    position: absolute;
+    top: 50%;
+    width: 60px;
+    height: 30px;
+    background-color: #000;
+    opacity: 0.3;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    line-height: 30px;
+    background-position: center;
+}
+.rightButton{
+    right: 20px;
+}
+.leftButton{
+    left: 20px;
+}
+
+#images>a>img{
+    width: 100%;
+    height: 200px;
+}
+/* 2 */
+.txt-top{
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    z-index: 5;
+    transition: height 0.1s linear 0s;
+    }
+    .txt-top:hover{
+        height: 40px;
+    
+    }
+    .txt-top li{
+        width: 12.5%;
+        background-color: rgb(0, 0,0,0.5);
+        color:#fff;
+        margin-right: 2px;
+        text-align: center;
+    }
+    .txt-top li:hover{
+        background-color:rgba(252,164,2,0.829);
+    }
+    .txt-top :last-child{
+        margin: 0;
+    }
+
+
+/* 导航栏 */
+.hm_nav
+{
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    position: absolute;
+    top:215px;
+}
+.hm_nav >ul
+{
+    width: 100%;
+    padding: 10px 0;
+    list-style:none
+}
+.hm_nav > ul >li
+{
+    width: 25%;
+    float: left;
+    text-align: center;
+}
+.hm_nav > ul > li >a
+{
+    display: block;
+ /* position: relative;
+ left: 50%; */
+ /* top: 50px; */
+}
+.hm_nav > ul > li > a >img
+{
+    width: 40px;
+    height: 40px;
+    /* display: block; */
+    margin: 0 auto;
+}
+.hm_nav> ul > li > a > img >p
+{
+    text-align: center;
+    color: #666;
+    font-size: 12px;
+    padding: 6px 0;
+}
+/* 商品主盒子 */
+.product
+{
+    width: 100%;
+    padding: 0 5px;
+    position: absolute;
+    top:365px;
+}
+.product>.product_box
+{
+    width: 100%;
+    background: #fff;
+    margin-top: 10px;
+    box-shadow: 0 0 1px #e0e0e0;
+}
+.product>.product_box>.product_box_tit
+{
+    height: 32px;
+    line-height: 32px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.product>.product_box>.product_box_tit.no_border
+{
+    border-bottom: none;
+}
+.product>.product_box>.product_box_tit>h3
+{
+    font-weight: normal;
+    font-size: 15px;
+    padding-left: 20px;
+    position: relative;
+    color: #666;
+}
+.product>.product_box>.product_box_tit>h3::before
+{
+    content:"";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 3px;
+    height: 12px;
+    background: #d8505c;
+}
+/* 掌上秒杀 */
+.hm_sk .sk_icon
+{
+    background:url(icon_4n9m4as08ok/11.png)no-repeat;
+    background-size: 16px 20px;
+    width: 16px;
+    height: 20px;
+    float: left;
+    margin-top: 6px;
+}
+.loginB {
+    width: 50px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    /* color: blue; */
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 15px;
+}
+.hm_sk .sk_name
+{
+    color: #d8505c;
+    font-size: 15px;
+    float: left;
+}
+.hm_sk .sk_time
+{
+    float: left;
+    margin-top: 8px;
+}
+.hm_sk .sk_time>span
+{
+    float:left;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    background: #333;
+    color: #fff;
+    margin-left: 3px;
+}
+.hm_sk .sk_time>span:nth-child(3n)
+{
+    background: #fff;
+    color: #333;
+    width: 5px;
+}
+.hm_sk .product_box_con>ul
+{
+width: 100%;
+font-size: 12px;
+padding: 10px 0;
+}
+.hm_sk .product_box_con>ul>li
+{
+    width: 33.333%;
+    float: left;
+    text-align: center;
+}
+.hm_sk .product_box_con>ul>li>a
+{
+    display: block;
+    width: 100%;
+    border-right: 1px solid #e0e0e0;
+}
+.hm_sk .product_box_con>ul>li:last-child>a
+{
+    border-right: 0;
+}
+.hm_sk .product_box_con>ul>li>a>img
+{
+    width: 64%;
+    display: block;
+    margin: 0 auto;
+}
+.hm_sk .product_box_con>ul>li>p:first-of-type
+{
+    color: #d8505c;
+    padding-top: 5px;
+}
+.hm_sk .product_box_con>ul>li>p:last-of-type
+{
+    text-decoration: line-through;
+    color: #666;
+    padding-top: 5px;
+}
+/* 组合样式 */
+.w_50
+{
+    width: 50%;
+    display: block;
+}
+.w_50>img
+{
+    display: block;
+    width: 100%;
+}
+.b_left
+{
+    border-left: 1px solid #e0e0e0;
+}
+.b_right
+{
+    border-left: 1px solid #e0e0e0;
+}
+.b_bottom
+{
+    border-left: 1px solid #e0e0e0;
+}
