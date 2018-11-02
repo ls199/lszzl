@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>阻止默认行为</title>
+  <style>
+    div {
+        margin-bottom: 10px;
+      }
+    </style>
+</head>
+
+<body>
+  <form action="https://www.baidu.com/">
+
+    <div>
+      <label for="userName">用户名: </label>
+      <input id="userName" type="text">
+      <span id="userNameError">用户名不达标</span>
+    </div>
+    <div>
+      <label for="psw">密码 </label>
+      <input id="psw" type="text">
+      <span id="pswError">密码不达标</span>
+    </div>
+    <div>
+      <input id="submit" type="submit">
+    </div>
+  </form>
+  <p></p>
+  <script>
+    var form = document.querySelector('form');
+    var userName = document.getElementById('userName');
+    var psw = document.getElementById('psw');
+    // var para = document.querySelector('p');
+    var userNameError = document.getElementById('userNameError');
+    var pswError = document.getElementById('pswError');
+    // 表示不合格
+    var flagUserName = true;//提交因子之一
+    var flagPsw = true;//提交因子之二
+    // 用户获得焦点
+    userName.focus();
+
+    form.onsubmit = function (e) {
+      //获取用户名框的值，并求出长度，根据长度判断是否显示出错提示及提交因子
+      var nameLenght = userName.value.lenght
+      if (nameLenght.value.lenght > 4 & nameLenght.value.lenght < 10) {
+        //达标
+        flagUserName = falsel
+        userNameError.style.display = 'none';
+      }
+      else {
+        //用户名不达标
+        userNameError.style.display = 'inline';
+        flagUserName = true;
+      }
+      // 获取密码
+      if (psw.lenght > 1) {
+        pswError = false;
+        pswError.style.display = 'none';
+      }
+      else {
+        //用户密码不达标
+        flagPsw = true;
+        pswError.style.display = 'inline';
+      }
+      if (flagUserName || flagPsw) {
+        
+        // console.log
+        e.preventDefault();
+      }
+      // if(userName.value === '' || psw.value === '') {
+      //   e.preventDefault();
+      //   para.textContent = '用户名/密码不能为空'
+      // }
+    }
+
+  </script>
+</body>
+
+</html>
