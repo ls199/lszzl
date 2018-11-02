@@ -13,33 +13,40 @@
         } */
 
         .dropbtn {
-            background-color:blue;
+            height: 28px;;
+            background-color: blue;
             color: white;
             padding: 1px;
             font-size: 20px;
             border: none;
             cursor: pointer;
+            position: relative;
+            left: 100px;
         }
 
         .dropdown {
             position: relative;
             display: inline-block;
+            top: 0;
+            left: 0;
         }
 
         .dropdown-content {
             display: none;
             position: absolute;
             background-color: #f9f9f9;
-            min-width: 200px;
+            min-width: 400px;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            position: relative;
+            left: 100px;
         }
-
         .dropdown-content a:hover {
             background-color: #f1f1f1
         }
 
         .dropdown:hover .dropdown-content {
             display: block;
+
         }
 
         .dropdown:hover .dropbtn {
@@ -49,7 +56,7 @@
         a {
             text-decoration: none;
             color: black;
-        } 
+        }
 
         a:hover {
             color: blue;
@@ -59,14 +66,19 @@
 
 <body>
     <div class="dropdown">
-        <button class="dropbtn">作业</button>
+        <button class="dropbtn">2018作业</button>
         <div class="dropdown-content">
-                <li><a href="HM/HM.HTML">黑马商城</a></li>
-            <li><a href="admin/admin.html">1.admin</a></li> 
+            <li><a href="HM/HM.HTML">黑马商城</a></li>
+            <li><a href="admin/admin.html">1.admin</a></li>
             <li><a href="admin/DX.html">2.弹性盒子</a></li>
-           <li><a href="js/number-guessing-game.html">2018.10.23课堂作业(js)</a></li>
-           <li><a href="azmazon-AnimationJS10.30/amazon.html">10月30号课堂作业(轮番图)</a></li>
-       
+            <li><a href="js/number-guessing-game.html">2018.10.23课堂作业(js)</a></li>
+            <li><a href="azmazon-AnimationJS10.30/amazon.html">10月30号课堂作业(轮番图)</a></li>
+            <li><a href="admin/01事件侦听属性on.html">11月01号课堂作业(事件侦听属性)</a></li>
+
+        </div>
+        <button class="dropbtn">2018项目</button>
+        <div class="dropdown-content">
+            <li><a href="HM/HM.HTML">黑马商城</a></li>
         </div>
     </div>
 </body>
