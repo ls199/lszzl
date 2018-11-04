@@ -7,7 +7,7 @@ var txtList = document.querySelector(".hm_category_left ul").children;
 var currentNo = 0;
 const nodeLength = 11;
 
-//计时器换片函数，间隔1S被调用,显示1张图像，其余图像隐藏。文本轮流高亮
+//计时器换片函数，间隔1S被调用,显示1张图像，其余图像隐藏。
 function changeImg() {
     // 获取图片/文本总数量
 
