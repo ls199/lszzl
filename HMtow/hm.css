@@ -3,6 +3,11 @@ body{
     font-family: "Microsoft YaHei",sans-serif;
     font-size: 14px;
     color: #333;
+/* 
+    margin: 0 auto;
+    position: relative; 
+    max-width: 1140px;
+    min-width: 300px; */
 }
 a{
     color: #333;
@@ -220,22 +225,22 @@ fieldset[disabled] .heima_nav .btn-link:focus{
 }
 /* 字体图标 */
 .heima_icon_E903::before{
-    content: "\e903";
+    content: url(img/钱.png);
 }
 .heima_icon_E907::before{
-    content: "\e907";
+    content: url(img/钱.png);
 }
 .heima_icon_E901::before{
-    content: "\e901";
+    content: url(img/钱.png);
 }
 .heima_icon_E900::before{
-    content: "\e900";
+    content: url(img/钱.png);
 }
 .heima_icon_E904::before{
-    content: "\e904";
+    content: url(img/钱.png);
 }
 .heima_icon_E902::before{
-    content: "\e902";
+    content: url(img/钱.png);
 }
 /* 预约 */
 .heima_book{
@@ -263,10 +268,10 @@ fieldset[disabled] .heima_nav .btn-link:focus{
 }
 /* 字体图标 */
 .heima_icon_E906::before{
-    content: "\e906";
+    content: url(img/时间.png)
 }
 .heima_icon_E905::before{
-    content: "\e905";
+    content: url(img/摄像.png)
 }
 
 /* 产品 */
@@ -607,16 +612,16 @@ fieldset[disabled] .heima_nav .btn-link:focus{
 }
 /* 字体图标 */
 .heima_icon_new01::before{
-    content: "\e90e";
+    content:url(img/房子.png);
 }
 .heima_icon_new02::before{
-    content: "\e90f";
+    content:url(img/房子.png);
 }
 .heima_icon_new03::before{
-    content: "\e910";
+    content:url(img/房子.png);
 }
 .heima_icon_new04::before{
-    content: "\e911";
+    content:url(img/房子.png);
 }
 /* 合作伙伴 */
 .heima_partner{
@@ -639,31 +644,31 @@ fieldset[disabled] .heima_nav .btn-link:focus{
 }
 /* 字体图标 */
 .heima_icon_partner01::before{
-    content: "\e946";
+    content:url(img/合作伙伴.png);
 }
 .heima_icon_partner02::before{
-    content: "\e92f";
+    content:url(img/合作伙伴.png);
 }
 .heima_icon_partner03::before{
-    content: "\e92e";
+    content:url(img/合作伙伴.png);
 }
 .heima_icon_partner04::before{
-    content: "\e92a";
+    content:url(img/合作伙伴.png);
 }
 .heima_icon_partner05::before{
-    content: "\e929";
+    content:url(img/合作伙伴.png);
 }
 .heima_icon_partner06::before{
-    content: "\e931";
+    content:url(img/合作伙伴.png);
 }
 .heima_icon_partner07::before{
-    content: "\e92c";
+    content:url(img/合作伙伴.png);
 }
 .heima_icon_partner08::before{
-    content: "\e92b";
+    content:url(img/合作伙伴.png);
 }
 .heima_icon_partner09::before{
-    content: "\e92d";
+    content:url(img/合作伙伴.png);
 }
 
 
