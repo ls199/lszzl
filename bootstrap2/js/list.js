@@ -1,4 +1,3 @@
-
 // 获取购物车数据
 var cart = new ShoppingCart();
 var cartRoot = document.querySelector('#cartRoot');
@@ -18,41 +17,43 @@ const operatorNameJson = {
     "decrease": "[data-operator='decrease']",
     "deleteItem": "[data-operator='deleteItem']"
 };
-const operatorNameJson = {
-    "checkItem": "[data-operator='checkItem']",
-    "increase": "[data-operator='increase']",
-    "decrease": "[data-operator='decrease']",
-    "deleteItem": "[data-operator='deleteItem']"
-};
 
 console.log(cart);
 
+//显示订单列表
 function displayOrderList() {
+    // 列获取购物车订单表
     let cartData = cart.getDataFromLocalStorage();
     let orderList = cartData.orderList;
     console.log(orderList);
     // 遍历订单列表｛
-    // for (const i in orderList){
-    //     let order=orderList[i];
-    //     console.log(order);
+
+    // for (const i in orderList) {
+    //  let order=orderList[i];
+    // console.log(order);
     // }
+
     // 找订单列表父元素
     let cartList = document.querySelector('#cartList');
+    //找样本节点
     let exmapleNode = document.querySelector('#orderExample');
-// 遍历订单列表
+    //  遍历订单列表｛
     for (let i = 0; i < orderList.length; i++) {
+        //当前订单数据
         let order = orderList[i];
         console.log(order);
-        // 克隆样本节点形成当前订单节点
+        //克隆样本节点形成当前订单节点
         node = exmapleNode.cloneNode(true);
         // 挂接到父元素
         cartList.appendChild(node);
-        // 设置数据
-        // 节点id
+
+        // 设-id  
         node.id = order.id;
+
+        // 设图像地址       
         let element = node.querySelector(dataNameJson.imgSrc);
         element.src = 'images/' + order.imgSrc;
-       
+
         // 设选中状态       
         element = node.querySelector(operatorNameJson.checkItem);
         element.checked = order.selectStatus;
@@ -70,28 +71,19 @@ function displayOrderList() {
         element = node.querySelector(dataNameJson.subPrice);
         element.textContent = (order.qty * order.price).toFixed(2);
 
-       
-        // console.log(imgNode);
-        node.classList.remove('d-none');
 
-        let selectNone=node.querySelector('[data-operator="checkItem"]');
-        selectNone.checked=order.selectStatus;
-        console.log(selectNone);
-        console.log(node);
+        // 移除当前订单节点到隐藏属性
+        node.classList.remove('d-none');
     }
-    //克隆一个样本节点
-    //设置一个新id
-    //挂接到父元素
-    // 获取所有数据节点data-name依次对应到数据送入节点对应属性
-    // 移除新节点到影藏属性d-none
 }
+
 //显示商品总样本数
 //显示已选中商品到总件数和总价格
 
 function displaySelectedTotal() {
 
     //获取总数相关节点,并设置对应值
-    
+
     let totalNode = cartRoot.querySelector(dataNameJson.units);
     totalNode.textContent = cart.getTotalUnits();
 
@@ -101,6 +93,18 @@ function displaySelectedTotal() {
 
     totalNode = cartRoot.querySelector(dataNameJson.selectedAmount);
     totalNode.textContent = (cart.getSelectedAmount()).toFixed(2);
-
 }
-displayOrderList();
+
+function deleteItemEventFun() {
+    let id = cartRoot.querySelector("data-id");
+    id.textContent = cart.ShoppingCart();
+    cart.deleteItem(id);
+    let cartListNode = document.querySelector('#cartList');
+    let currentItemNode = cartListNode.querySelector('[data-id="' + id + '"]');
+    cartListNode.removeChild(currentItemNode);
+}
+
+
+
+
+

@@ -1,6 +1,8 @@
 // 获取购物车数据
 var cart = new ShoppingCart();
 var cartRoot = document.querySelector('#cartRoot');
+
+// 定义一组字符串命名规则-JSON
 const dataNameJson = {
     "price": "[data-name='price']",
     "qty": "[data-name='qty']",
@@ -49,17 +51,18 @@ function displayOrderList() {
 
         // 设-id  
         node.id = order.id;
+        // 给删除按钮设计一个id
 
         // 设图像地址       
         let element = node.querySelector(dataNameJson.imgSrc);
         element.src = 'images/' + order.imgSrc;
 
         // 设选中状态       
-        element = node.querySelector(operatorNameJson.checkItem);
-        element.checked = order.selectStatus;
+        // element = node.querySel.selectStatus;
 
         // 设置订单单价
-        element = node.querySelector(dataNameJson.price);
+        element = node.querySelector(operatorNameJson.checkItem);
+        // element.checked = orderector(dataNameJson.price);
         console.log(element);
         element.textContent = (order.price).toFixed(2);
 
@@ -96,9 +99,32 @@ function displaySelectedTotal() {
 
 }
 
+// 为相关节点注册事件
+function regEvent(){
+// 获取清空购物车节点
+let element=cartRoot.querySelector(operatorGlobal.clearAll);
+console.log(element);
+// 注册单击事件
+element.onclick=clearAllEventFun;
 
-displayOrderList();
-displaySelectedTotal();
+
+}
+// 清空事件触发函数
+function clearAllEventFun(){
+    cart.clearCart();
+}
+
+// 初始化函数
+function init(){
+    // 显示订单列表
+    displayOrderList();
+    // 显示总数据
+    displaySelectedTotal();
+    // 为所有操作节点注册事件
+    regEvent();
+}
+
+init();
 
 
 
